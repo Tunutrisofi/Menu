@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Nutri Sofi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h2>Tu Nutri Sofi 🍓</h2>
+    <nav>
+      <a href="#" class="scroll-inicio">Inicio</a>
+      <a href="#" class="no-scroll">Sobre mí</a>
+      <a href="#" class="no-scroll">Servicios</a>
+      <a href="#contacto" class="scroll-contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Transforma tu alimentación, mejora tu vida</h1>
+    <p>
+      Te acompaño a crear hábitos saludables con un enfoque personalizado y consciente. Agenda tu consulta online desde cualquier lugar.
+    </p>
+    <button class="boton" onclick="agendar()">Agenda tu cita</button>
+  </section>
+
+  <section>
+    <h2>Servicios</h2>
+    <div class="servicios">
+      <div class="card">
+        <h3>Consulta Nutricional</h3>
+        <p>Evaluación completa, diagnóstico y plan de alimentación personalizado.</p>
+      </div>
+      <div class="card">
+        <h3>Nutrición Vegetariana</h3>
+        <p>Guía para una dieta balanceada basada en plantas, sin carencias nutricionales.</p>
+      </div>
+      <div class="card">
+        <h3>Educación Alimentaria</h3>
+        <p>Talleres, charlas y asesorías para colegios, empresas o familias.</p>
+      </div>
+    </div>
+  </section>
+
+<section id="contacto">
+  <div class="contacto-container">
+    <form class="contacto-form">
+    <h2>Contacto</h2>
+
+    <input type="text" id="nombre" placeholder="Nombre y Apellido" required />
+
+    <input type="email" id="email" placeholder="Correo" required />
+
+    <input type="tel" id="telefono" placeholder="Teléfono" />
+
+    <textarea id="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." maxlength="500"></textarea>
+
+    <button type="submit" class="boton">Enviar</button>
+    </form>
+
+    <div class="info-contacto">
+      <h3>Horario laboral</h3>
+      <p>
+        Lun - Vie: 9:00 - 19:00<br />
+        Sábado: 9:00 - 14:00<br />
+        Domingo: Cerrado
+      </p>
+
+      <h3>Dirección</h3>
+      <p>Calle La Corbeta 5545, Maipú</p>
+
+      <h3>Correo</h3>
+      <p><a href="mailto:Tunutrisofi@gmail.com">Tunutrisofi@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Tu Nutri Sofi | Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
