@@ -16,35 +16,80 @@
   </header>
 
   <main class="login-page">
-    <div class="login-box">
-      <h1>Cuenta</h1>
-      <div class="form-toggle">
-        <button id="toggle-login" class="active">Iniciar sesión</button>
-        <button id="toggle-register">Crear cuenta</button>
-      </div>
+    <div class="scroll-wrapper">
+      <div class="login-box">
+        <h1 id="form-title">Iniciar sesión</h1>
 
-      <div id="login-form" class="form-container">
-        <form id="form-login">
-          <input type="email" id="login-email" placeholder="Correo" required />
-          <input type="password" id="login-password" placeholder="Contraseña" required />
-          <button type="submit" class="boton">Entrar</button>
-        </form>
-      </div>
+        <div class="form-toggle">
+          <span id="toggle-text">¿Eres nuevo en este sitio?</span>
+          <button id="toggle-register">Regístrate</button>
+        </div>
 
-      <div id="register-form" class="form-container oculto">
-        <form id="form-register">
-          <input type="text" id="reg-nombre" placeholder="Nombre completo" required />
-          <input type="email" id="reg-email" placeholder="Correo" required />
-          <input type="password" id="reg-password" placeholder="Contraseña" required />
-          <input type="password" id="reg-password2" placeholder="Repetir contraseña" required />
-          <button type="submit" class="boton">Crear cuenta</button>
-        </form>
-      </div>
+        <!-- FORMULARIO LOGIN -->
+        <div id="login-form" class="form-container">
+          <form id="form-login">
+            <input type="email" id="login-email" placeholder="Correo" required />
+            <input type="password" id="login-password" placeholder="Contraseña" required />
+            <button type="submit" class="boton">Entrar</button>
+          </form>
+        </div>
 
-      <a href="./index.html" class="volver">← Volver al sitio</a>
+        <!-- FORMULARIO REGISTRO -->
+        <div id="register-form" class="form-container oculto">
+          <form id="form-register">
+            <input type="text" id="reg-rut" placeholder="RUT (Ej: 12.345.678-9)" required />
+            <input type="text" id="reg-nombre" placeholder="Nombre" required />
+            <input type="text" id="reg-apellidoP" placeholder="Apellido paterno" required />
+            <input type="text" id="reg-apellidoM" placeholder="Apellido materno" required />
+
+            <select id="reg-sexo" required>
+              <option value="">Sexo</option>
+              <option value="M">Masculino</option>
+              <option value="F">Femenino</option>
+              <option value="O">Otro</option>
+            </select>
+
+            <input type="tel" id="reg-telefono" placeholder="Teléfono (Ej: +56 9 1234 5678)" required />
+            <input type="date" id="reg-fechaNac" required />
+            <input type="text" id="reg-direccion" placeholder="Dirección" required />
+            <input type="text" id="reg-ciudad" placeholder="Ciudad" required />
+
+            <select id="reg-pais" required>
+              <option value="">País</option>
+              <option>Chile</option>
+              <option>Argentina</option>
+              <option>Perú</option>
+              <option>Colombia</option>
+              <option>Brasil</option>
+              <option>Uruguay</option>
+              <option>Paraguay</option>
+              <option>Bolivia</option>
+              <option>Ecuador</option>
+              <option>Venezuela</option>
+              <option>México</option>
+              <option>Costa Rica</option>
+              <option>Panamá</option>
+              <option>Guatemala</option>
+              <option>Honduras</option>
+              <option>El Salvador</option>
+              <option>Nicaragua</option>
+              <option>República Dominicana</option>
+              <option>Cuba</option>
+            </select>
+
+            <input type="email" id="reg-email" placeholder="Correo" required />
+            <input type="password" id="reg-password" placeholder="Contraseña" required />
+            <input type="password" id="reg-password2" placeholder="Repetir contraseña" required />
+
+            <button type="submit" class="boton">Crear cuenta</button>
+          </form>
+        </div>
+
+        <a href="./index.html" class="volver">← Volver al sitio</a>
+      </div>
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>

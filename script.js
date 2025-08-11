@@ -1,9 +1,9 @@
-// --- Funciones generales ---
+// Funciones generales
 function agendar() {
   alert("¡Pronto podrás agendar tu cita online!");
 }
 
-// Contacto
+// Contacto - manejo del formulario
 const contactoForm = document.querySelector('.contacto-form');
 if (contactoForm) {
   contactoForm.addEventListener('submit', function (e) {
@@ -13,7 +13,7 @@ if (contactoForm) {
   });
 }
 
-// Scroll suave
+// Scroll suave al contacto
 const scrollContacto = document.querySelector('.scroll-contacto');
 if (scrollContacto) {
   scrollContacto.addEventListener('click', function (e) {
@@ -23,6 +23,7 @@ if (scrollContacto) {
   });
 }
 
+// Scroll suave al inicio
 const scrollInicio = document.querySelector('.scroll-inicio');
 if (scrollInicio) {
   scrollInicio.addEventListener('click', function (e) {
@@ -31,54 +32,9 @@ if (scrollInicio) {
   });
 }
 
+// Prevenir scroll para enlaces sin acción
 document.querySelectorAll('.no-scroll').forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
   });
 });
-
-// --- Lógica Login ---
-const toggleLoginBtn = document.getElementById('toggle-login');
-const toggleRegisterBtn = document.getElementById('toggle-register');
-const loginFormContainer = document.getElementById('login-form');
-const registerFormContainer = document.getElementById('register-form');
-
-if (toggleLoginBtn && toggleRegisterBtn) {
-  toggleLoginBtn.addEventListener('click', () => {
-    toggleLoginBtn.classList.add('active');
-    toggleRegisterBtn.classList.remove('active');
-    loginFormContainer.classList.remove('oculto');
-    registerFormContainer.classList.add('oculto');
-  });
-
-  toggleRegisterBtn.addEventListener('click', () => {
-    toggleRegisterBtn.classList.add('active');
-    toggleLoginBtn.classList.remove('active');
-    registerFormContainer.classList.remove('oculto');
-    loginFormContainer.classList.add('oculto');
-  });
-}
-
-const formLogin = document.getElementById('form-login');
-if (formLogin) {
-  formLogin.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert(`Sesión iniciada para: ${document.getElementById('login-email').value}`);
-    window.location.href = './index.html';
-  });
-}
-
-const formRegister = document.getElementById('form-register');
-if (formRegister) {
-  formRegister.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const p1 = document.getElementById('reg-password').value;
-    const p2 = document.getElementById('reg-password2').value;
-    if (p1 !== p2) {
-      alert('Las contraseñas no coinciden.');
-      return;
-    }
-    alert(`Cuenta creada para: ${document.getElementById('reg-nombre').value}`);
-    window.location.href = './index.html';
-  });
-}
