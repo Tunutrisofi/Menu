@@ -183,9 +183,10 @@ footer {
 .login-page {
   display: flex;
   justify-content: center;
-  padding: 60px 20px;
-  min-height: calc(100vh - 120px);
+  align-items: center; /* centra verticalmente */
+  min-height: calc(100vh - 120px); /* ocupa toda la pantalla menos el header */
   background: linear-gradient(to bottom, #fff9f9, #fff7f7);
+  padding: 20px;
 }
 
 .login-box {
