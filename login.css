@@ -1,0 +1,156 @@
+/* ---------- LOGIN PAGE ---------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6eb, #fff7f7);
+  color: #333;
+}
+
+/* Header del login */
+header {
+  background-color: #ffb6c1;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal centrado */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* menos la altura del header */
+  padding: 20px;
+}
+
+/* Caja del login */
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 32px 26px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-box h1 {
+  margin-bottom: 16px;
+  color: #e0556c;
+  font-size: 1.8rem;
+}
+
+/* Botones de alternar */
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #ffe6eb;
+  color: #e0556c;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-toggle button:hover {
+  background: #ffd6e0;
+  transform: scale(1.03);
+}
+
+.form-toggle button.active {
+  background: #ff6b81;
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 107, 129, 0.3);
+}
+
+/* Formularios */
+.form-container {
+  padding: 6px 0 10px 0;
+}
+
+.form-container.oculto {
+  display: none;
+}
+
+.form-container form input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  border: 1.8px solid #ffb6c1;
+  border-radius: 8px;
+  font-size: 0.95em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container form input:focus {
+  border-color: #ff6b81;
+  box-shadow: 0 0 5px rgba(255, 107, 129, 0.3);
+  outline: none;
+}
+
+/* Botón del formulario */
+.form-container form .boton {
+  background: #ff6b81;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 14px;
+  transition: background 0.3s ease;
+}
+
+.form-container form .boton:hover {
+  background: #e0556c;
+}
+
+/* Volver */
+.volver {
+  display: inline-block;
+  margin-top: 18px;
+  color: #e0556c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.volver:hover {
+  text-decoration: underline;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-box {
+    padding: 24px 18px;
+  }
+}
