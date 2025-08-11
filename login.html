@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar sesión - Tu Nutri Sofi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h2>Tu Nutri Sofi 🍓</h2>
+    <nav>
+      <a href="index.html" class="no-scroll">Inicio</a>
+      <a href="index.html#contacto" class="no-scroll">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="login-page">
+    <div class="login-box">
+      <h1>Cuenta</h1>
+
+      <div class="form-toggle">
+        <button id="toggle-login" class="active">Iniciar sesión</button>
+        <button id="toggle-register">Crear cuenta</button>
+      </div>
+
+      <div id="login-form" class="form-container">
+        <form id="form-login">
+          <input type="email" id="login-email" placeholder="Correo" required />
+          <input type="password" id="login-password" placeholder="Contraseña" required />
+          <button type="submit" class="boton">Entrar</button>
+        </form>
+      </div>
+
+      <div id="register-form" class="form-container oculto">
+        <form id="form-register">
+          <input type="text" id="reg-nombre" placeholder="Nombre completo" required />
+          <input type="email" id="reg-email" placeholder="Correo" required />
+          <input type="password" id="reg-password" placeholder="Contraseña" required />
+          <input type="password" id="reg-password2" placeholder="Repetir contraseña" required />
+          <button type="submit" class="boton">Crear cuenta</button>
+        </form>
+      </div>
+
+      <a href="index.html" class="volver">← Volver al sitio</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -14,6 +14,9 @@
       <a href="#" class="no-scroll">Sobre mí</a>
       <a href="#" class="no-scroll">Servicios</a>
       <a href="#contacto" class="scroll-contacto">Contacto</a>
+
+      <!-- Ícono que NAVEGA a otra página (login.html) -->
+      <a href="login.html" id="icono-usuario" title="Iniciar sesión">👤</a>
     </nav>
   </header>
 
@@ -43,39 +46,35 @@
     </div>
   </section>
 
-<section id="contacto">
-  <div class="contacto-container">
-    <form class="contacto-form">
-    <h2>Contacto</h2>
+  <section id="contacto">
+    <div class="contacto-container">
+      <form class="contacto-form">
+        <h2>Contacto</h2>
 
-    <input type="text" id="nombre" placeholder="Nombre y Apellido" required />
+        <input type="text" id="nombre" placeholder="Nombre y Apellido" required />
+        <input type="email" id="email" placeholder="Correo" required />
+        <input type="tel" id="telefono" placeholder="Teléfono" />
+        <textarea id="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." maxlength="500"></textarea>
 
-    <input type="email" id="email" placeholder="Correo" required />
+        <button type="submit" class="boton">Enviar</button>
+      </form>
 
-    <input type="tel" id="telefono" placeholder="Teléfono" />
+      <div class="info-contacto">
+        <h3>Horario laboral</h3>
+        <p>
+          Lun - Vie: 9:00 - 19:00<br />
+          Sábado: 9:00 - 14:00<br />
+          Domingo: Cerrado
+        </p>
 
-    <textarea id="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." maxlength="500"></textarea>
+        <h3>Dirección</h3>
+        <p>Calle La Corbeta 5545, Maipú</p>
 
-    <button type="submit" class="boton">Enviar</button>
-    </form>
-
-    <div class="info-contacto">
-      <h3>Horario laboral</h3>
-      <p>
-        Lun - Vie: 9:00 - 19:00<br />
-        Sábado: 9:00 - 14:00<br />
-        Domingo: Cerrado
-      </p>
-
-      <h3>Dirección</h3>
-      <p>Calle La Corbeta 5545, Maipú</p>
-
-      <h3>Correo</h3>
-      <p><a href="mailto:Tunutrisofi@gmail.com">Tunutrisofi@gmail.com</a></p>
+        <h3>Correo</h3>
+        <p><a href="mailto:Tunutrisofi@gmail.com">Tunutrisofi@gmail.com</a></p>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <footer>
     <p>&copy; 2025 Tu Nutri Sofi | Todos los derechos reservados</p>

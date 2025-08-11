@@ -1,3 +1,4 @@
+/* ---------- GLOBAL ---------- */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -26,6 +27,7 @@ nav a {
   font-weight: bold;
 }
 
+/* ---------- HERO / SITE ---------- */
 .hero {
   display: flex;
   flex-direction: column;
@@ -98,7 +100,7 @@ footer {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  max-width: 700px; /* menos ancho para que no quede muy grande */
+  max-width: 700px;
   margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
@@ -172,8 +174,89 @@ footer {
   text-decoration: underline;
 }
 
-/* Responsive */
+/* Utility */
+.oculto {
+  display: none;
+}
 
+/* ---------- LOGIN PAGE ---------- */
+.login-page {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  min-height: calc(100vh - 120px);
+  background: linear-gradient(to bottom, #fff9f9, #fff7f7);
+}
+
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #e0556c;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.form-toggle button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #ffe6eb;
+  color: #e0556c;
+  font-weight: 600;
+}
+
+.form-toggle button.active {
+  background: #ff6b81;
+  color: white;
+  box-shadow: 0 6px 14px rgba(224,85,108,0.2);
+}
+
+.form-container {
+  padding: 6px 0 10px 0;
+}
+
+.form-container form input {
+  display: block;
+  width: 92%;
+  margin: 8px auto;
+  padding: 10px;
+  border: 1.5px solid #ffb6c1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-container form .boton {
+  margin-top: 12px;
+  width: 92%;
+  border-radius: 10px;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 14px;
+  color: #e0556c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .contacto-container {
     flex-wrap: wrap;
@@ -186,5 +269,9 @@ footer {
     width: 100%;
     max-width: none;
     padding: 30px 20px;
+  }
+
+  .login-box {
+    padding: 22px;
   }
 }
