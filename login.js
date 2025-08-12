@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Si ya hay sesión activa, redirigir directo a usuario.html
+  if(localStorage.getItem('usuarioLogueado')) {
+    window.location.href = 'usuario.html';
+    return;
+  }
+
   const toggleText = document.getElementById('toggle-text');
   const toggleBtn = document.getElementById('toggle-register');
   const formTitle = document.getElementById('form-title');
@@ -9,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let showingLogin = true;
 
-  // Función para crear o actualizar mensaje de error en un contenedor
   function showError(formDiv, message) {
     let errorEl = formDiv.querySelector('.error-msg');
     if (!errorEl) {
@@ -23,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     errorEl.textContent = message;
   }
 
-  // Quitar mensaje de error si existe
   function clearError(formDiv) {
     const errorEl = formDiv.querySelector('.error-msg');
     if (errorEl) {
@@ -33,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   toggleBtn.addEventListener('click', () => {
     if (showingLogin) {
-      // Mostrar registro
       formTitle.textContent = 'Crea tu cuenta';
       toggleText.textContent = '¿Ya tienes cuenta?';
       toggleBtn.textContent = 'Iniciar sesión';
@@ -43,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
       clearError(registerFormDiv);
       showingLogin = false;
     } else {
-      // Mostrar login
       formTitle.textContent = 'Iniciar sesión';
       toggleText.textContent = '¿Eres nuevo en este sitio?';
       toggleBtn.textContent = 'Regístrate';
@@ -55,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Validar login al enviar
   loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     clearError(loginFormDiv);
@@ -68,13 +69,20 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Si todo bien, eliminar error y puedes hacer el envío real aquí
-    clearError(loginFormDiv);
-    alert('Inicio de sesión exitoso (aquí va tu lógica real)');
-    loginForm.reset();
+    // Usuario fijo para ejemplo (puedes agregar más usuarios o guardar en localStorage)
+    const usuarioValido = 'usuario@nutrisofi.com';
+    const passwordValida = '123456';
+
+    if (email === usuarioValido && password === passwordValida) {
+      // Guardar sesión activa
+      localStorage.setItem('usuarioLogueado', email);
+      // Redirigir a página usuario
+      window.location.href = 'usuario.html';
+    } else {
+      showError(loginFormDiv, 'Correo o contraseña incorrectos.');
+    }
   });
 
-  // Validar registro al enviar
   registerForm.addEventListener('submit', (e) => {
     e.preventDefault();
     clearError(registerFormDiv);
@@ -95,14 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Validar que las contraseñas coincidan
     if (registerForm['reg-password'].value !== registerForm['reg-password2'].value) {
       showError(registerFormDiv, 'Las contraseñas no coinciden.');
       return;
     }
 
-    // Si todo bien, eliminar error y continuar
-    clearError(registerFormDiv);
+    // Aquí podrías guardar el usuario en localStorage o base de datos real
     alert('Cuenta creada con éxito (aquí va tu lógica real)');
     registerForm.reset();
   });

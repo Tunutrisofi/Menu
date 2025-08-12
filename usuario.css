@@ -1,0 +1,134 @@
+/* ---------- GLOBAL ---------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff9f9;
+  color: #333;
+}
+
+header {
+  background-color: #ffb6c1;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  color: #ff6b81;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Perfil */
+.perfil {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.foto-perfil {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 12px rgba(255, 107, 129, 0.4);
+  margin-bottom: 16px;
+}
+
+.perfil h3 {
+  color: #e0556c;
+  margin-bottom: 6px;
+}
+
+/* Cards generales */
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 24px 30px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.card h4 {
+  color: #e0556c;
+  margin-bottom: 20px;
+}
+
+/* Lista datos personales */
+.datos-personales ul {
+  list-style: none;
+  padding: 0;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.datos-personales ul li {
+  margin-bottom: 8px;
+}
+
+/* Tabla historial */
+.historial table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+.historial th,
+.historial td {
+  border: 1px solid #ffb6c1;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.historial th {
+  background-color: #ffe6eb;
+  color: #e0556c;
+  font-weight: 700;
+}
+
+/* Recomendaciones */
+.recomendaciones p {
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.4;
+  color: #666;
+}
+
+/* Footer */
+footer {
+  background: #ffb6c1;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px 15px;
+    padding: 0 10px;
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+  }
+}
