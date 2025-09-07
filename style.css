@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: #ffb6c1;
+  background-color: #e5b3fe;
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -38,7 +38,7 @@ nav a:hover {
   align-items: center;
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(to bottom right, #ffe6eb, #fff);
+  background: linear-gradient(to bottom right, #ffe6eb);
 }
 
 .hero h1 {
@@ -185,7 +185,7 @@ section {
 
 /* ---------- FOOTER ---------- */
 footer {
-  background: #ffb6c1;
+  background: #e5b3fe;
   text-align: center;
   padding: 20px;
   color: white;

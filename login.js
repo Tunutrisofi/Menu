@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Si ya hay sesión activa, redirigir directo a usuario.html
   if(localStorage.getItem('usuarioLogueado')) {
-    window.location.href = 'usuario.html';
+    window.location.href = '../usuario/usuario.html';
     return;
   }
 
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Guardar sesión activa
       localStorage.setItem('usuarioLogueado', email);
       // Redirigir a página usuario
-      window.location.href = 'usuario.html';
+      window.location.href = '../usuario/usuario.html';
     } else {
       showError(loginFormDiv, 'Correo o contraseña incorrectos.');
     }
